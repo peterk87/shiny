@@ -625,8 +625,8 @@ dataTablesJSON <- function(data, req) {
     # toJSON(list(x = matrix(1))) => {x: [ 1 ]} (loss of dimension, #429)
     if (all(dim(fdata) == 1)) 
     {
-      break
-      fdata <- list(list(fdata[1, 1]))
+      # fdata <- list(list(fdata[1, 1]))
+      fdata <- list()
     }
 
     res <- toJSON(list(
